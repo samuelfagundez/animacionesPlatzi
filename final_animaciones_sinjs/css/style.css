@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+}
+
+.container {
+    border: 1px solid red;
+    width: 100%;
+}
+
+.cuadrado {
+    width: 200px;
+    height: 200px;
+    background: #7dc900;
+    margin: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: cuadrado, rebote;
+    animation-duration: 3s, .3s;
+    animation-iteration-count: infinite, 20;
+    animation-timing-function: linear, ease-in-out;
+    animation-direction: alternate;
+    position: relative;
+}
+
+
+
+@keyframes cuadrado {
+    0% {
+        /* opacity: 1; */
+        left: 0;
+    }
+
+    100% {
+        /* opacity: 0; */
+        left: calc(100% - 240px);
+    }
+}
+
+@keyframes escalera {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(500px);
+    }
+}
+
+@keyframes rebote {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px) scale(1, .8);
+    }
+
+}
